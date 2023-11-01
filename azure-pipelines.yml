@@ -13,7 +13,7 @@ variables:
   webAppName: 'flask-app-nn5'
   environmentName: 'flask-ml-service'
   #Project root folder 
-  projectRoot: $(System.DefaultWrokingDirectory)
+  projectRoot: $(System.DefaultWorkingDirectory)
 
 stages:
   - stage: Build 
@@ -24,7 +24,7 @@ stages:
       steps: 
       - script: 
           export PATH=$HOME/.local/bin:$PATH
-          python3.7 -m pip install -r requirements.txt
+          python3.9 -m pip install -r requirements.txt
         workingDirectory: $(projectRoot)
         displayName: 'Step - Install requirements.txt'
       - task: ArchiveFiles@2
