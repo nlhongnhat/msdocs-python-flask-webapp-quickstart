@@ -27,7 +27,7 @@ stages:
         workingDirectory: $(projectRoot)
         displayName: 'Step - Install requirements.txt'
       - task: ArchiveFiles@2
-        displayName: 'Step - Crchive files'
+        displayName: 'Step - Archive files'
         inputs:
           rootFolderOrFile: '$(projectRoot)'
           includeRootFolder: false
